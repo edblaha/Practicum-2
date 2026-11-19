@@ -1,0 +1,32 @@
+AI Use- 
+
+Prompt 1- 
+What are my issues- library(tidyverse) library(sf)
+library(tigris)    # for shift_geometry() library(ggthemes)  # for theme_map()
+counties <- st_read("/Users/edwardblaha/DataWrangling/Practicum 2/OneDrive_1_11-15-2026/cb_2024_us_county_500k/cb_2024_us_county_500k.shp") high_points <- read.csv("/Users/edwardblaha/DataWrangling/Practicum 2/OneDrive_1_11-15-2026/nyshighpoints.csv")
+#1 counties_ny <- counties |>     filter(STATEFP == 36)
+NY_map <- ggplot(counties_ny) +   labs(title = "Counties of New York", fill = NULL) +   theme_map() 
+NY_map
+Prompt 2- how do I use my own scale for points on ggplot2
+
+Prompt 3- What are my issues? NY_Map_High_Points_Color <- ggplot(counties_ny) +   geom_sf()+   geom_point(data = high_points, aes(Longitude, Latitude ), color = high_points$Elevation_Meters, size = 2)+   scale_color_gradientn(colors = HighPoint_cols, name = "Elevation (ft)")+   labs(title = "High Point of Each County in New York") +   theme_map()+    theme(plot.title = element_text(hjust = 0.5))
+NY_Map_High_Points_Color
+Prompt 4- What are my issues?issues- NY_Map_High_Points_Color_Lab <- ggplot(counties_ny) +
+  geom_sf()+
+  geom_point(data = high_points, aes(Longitude, Latitude, color = Elevation_Feet), size = 2)+
+  scale_color_gradientn(colors = HighPoint_cols, name = "Elevation (Feet)")+
+  labs(title = "High Point of Each County in New York") +
+  geom_text(data = high_points, aes(tail(highpoints_sorted, 1)))
+  theme_map()+ 
+  theme(plot.title = element_text(hjust = 0.5))
+NY_Map_High_Points_Color_Lab
+
+
+Prompt 5- how to change the population label to full number instead of 2e+06
+
+Prompt 6-How to see greater contrast between population density when some counties are extremely dense
+
+Prompt 7- How could I get a weaker scale than log10
+
+Prompt 8- 
+

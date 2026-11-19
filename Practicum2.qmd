@@ -1,0 +1,60 @@
+---
+title: "Practicum 2"
+author: Edward Blaha
+format:
+  pdf:
+    geometry: margin=0.75in
+    fig-width: 9
+    fig-height: 6
+knitr:
+  opts_chunk:
+    out.width: "100%"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| include: false
+source("/Users/edwardblaha/DataWrangling/Practicum 2/Practicum 2/Practicum2.R")
+```
+
+## Map of NY Counties
+
+```{r}
+NY_map
+```
+
+## Map of NY High Points
+```{r}
+NY_Map_High_Points
+```
+
+## Map of NY High Points, color coded. 
+
+```{r}
+NY_Map_High_Points_Color 
+```
+
+Battle Hill in Kings County (Brooklyn) is the lowest high point of any county in NY, while Mount Marcy in Essex County is the highest point in NY. Mount Marcy has an elevation of 5344 feet. Battle Hill has an elevation of 220 feet. 
+
+```{r}
+NY_Map_High_Points_Color_Lab 
+```
+
+## Counties by Population
+```{r}
+NY_map_population
+```
+
+Kings County is the most populous in New York, and Hamilton County is the least populous in New York. 
+
+## Counties by Population Density
+```{r}
+NY_map_population_density
+```
+
+New York County is the densest in NY, and Hamilton County is the least dense.
+
+
