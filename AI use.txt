@@ -28,5 +28,5 @@ Prompt 6-How to see greater contrast between population density when some counti
 
 Prompt 7- How could I get a weaker scale than log10
 
-Prompt 8- 
+
 
